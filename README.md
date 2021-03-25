@@ -5,6 +5,54 @@
 
 **-Record Patient Data**
 
+## Setup
+
+The first thing to do is to clone the repository:
+
+```sh
+$ git clone https://github.com/Vejovis-Analytics/project2-diabetesapplication-api.git
+$ cd project2-diabetesapplication-api
+```
+**Create a virtual environment to install dependencies in and activate it:**
+
+```
+python -m venv ~/env
+```
+
+**Activate virtual environment**
+
+```
+source ~/env/bin/activate
+```
+
+
+**Install dependencies from requirements.txt**
+
+*Note: Virtual environment must be activated
+the `(env)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment set up by `python -m venv ~/env`.
+*
+
+```
+pip install -r requirements.txt
+```
+
+
+Once `pip` has finished downloading the dependencies:
+```sh
+(env)$ cd project
+(env)$ python manage.py runserver
+```
+And navigate to `http://127.0.0.1:8000/`.
+
+You will have access to:
+`/auth`
+`/api`
+`/admin`
+
+
+## Additional Resources 
+
 ## Git
 
 Use the below Git commands in the Windows Command Prompt or macOS Terminal.
@@ -48,32 +96,10 @@ git push origin
 
 ## Virtual Environments
 
-The below commands are used for managing Virtual Environments using Python3-env. Use these commands when connected to your Vagrant server.
-
-**Create new environment**
-
-```
-python -m venv ~/env
-```
-
-**Activate virtual environment**
-
-```
-source ~/env/bin/activate
-```
-
 **De-activate virtual environment**
 
 ```
 deactivate
-```
-
-**Install requirements from requirements.txt**
-
-*Note: Virtual environment must be activated*
-
-```
-pip install -r requirements.txt
 ```
 
 ## Django Management Commands
