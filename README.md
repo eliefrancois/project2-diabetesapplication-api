@@ -114,56 +114,6 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-## Vagrant
-
-These commands are used for managing Vagrant using the GitBash or Terminal windows.
-
-**Initialise Vagrant on project**
-
-```
-vagrant init ubuntu/bionic64
-```
-
-**Start Vagrant box**
-
-```
-vagrant up
-```
-
-**Connect to Vagrant box**
-
-```
-vagrant ssh
-```
-
-**Disconnect from Vagrant box**
-
-*Note: This command is a standard linux command for ending an SSH session*
-
-```
-exit
-```
-
-**Stop Vagrant box**
-
-```
-vagrant halt
-```
-
-**Remove Vagrant box**
-
-```
-vagrant destroy
-```
-
-**Update Vagrant box image**
-
-*Note: you must rebuild the image after updating*
-
-```
-vagrant box update
-```
-
 ## Terminal / GitBash Commands
 
 Change directory
