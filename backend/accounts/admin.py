@@ -2,4 +2,4 @@ from django.contrib import admin
 from accounts import models
 
 # Register your models here.
-admin.site.register(models.PatientInfo)
+admin.site.register(models.Injection_Details)

@@ -3,7 +3,7 @@ from accounts import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register('patientFeed', views.PatientInfoViewSet)
+router.register('patientFeed', views.Injection_DetailsViewSet)
 
 urlpatterns = [
     path('', include(router.urls))

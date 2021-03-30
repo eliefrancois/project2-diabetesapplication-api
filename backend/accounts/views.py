@@ -10,17 +10,17 @@ from accounts import serializers # Will use this to tell API what data to exect 
 from accounts import models
 from accounts import permissions
 
-class PatientInfoViewSet(viewsets.ModelViewSet):
+class Injection_DetailsViewSet(viewsets.ModelViewSet):
     """Handles creating, reading and updating patient info readings"""
     
     authentication_classes = (TokenAuthentication,)
-    serializer_class = serializers.PatientInfoSerializer # This points to the
-    queryset = models.PatientInfo.objects.all()
+    serializer_class = serializers.Injection_DetailsSerializer # This points to the
+    queryset = models.Injection_Details.objects.all()
     permission_classes = (permissions.UpdateOwnReading, IsAuthenticated,) # Validates that a user is authenticated to read or modify objects
 
     def get_queryset(self):
         user = self.request.user
-        return models.PatientInfo.objects.get_queryset().filter(user_profile=user)
+        return models.Injection_Details.objects.get_queryset().filter(user_profile=user)
     
     
 

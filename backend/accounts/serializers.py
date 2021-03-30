@@ -11,11 +11,11 @@ class UserCreateSerializer(UserCreateSerializer):
         fields = ('id','email','name','password')
 
 
-class UserProfileSerializer(serializers.ModelSerializer):
+class User_ProfileSerializer(serializers.ModelSerializer):
     """Serializes a user profile object"""
 
     class Meta:
-        model = models.UserProfile
+        model = models.User_Profile
         fields = ('id', 'email', 'name', 'password')
         extra_kwargs = {
             'password': {
@@ -43,11 +43,11 @@ class UserProfileSerializer(serializers.ModelSerializer):
         return super().update(instance, validated_data)   
 
 
-class PatientInfoSerializer(serializers.ModelSerializer):
+class Injection_DetailsSerializer(serializers.ModelSerializer):
     """Serializes patient Info objects"""
 
     class Meta:  
-        model = models.PatientInfo # Points this serializer to the patient info model
+        model = models.Injection_Details # Points this serializer to the patient info model
         fields = ('id','user_profile','inject_date', 'inject_time', 'blood_sugar_level', 'is_insulin_injected', 'quantity', 'inject_area',)
         extra_kwargs = {
             'user_profile': {

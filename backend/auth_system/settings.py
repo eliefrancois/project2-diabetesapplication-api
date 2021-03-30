@@ -161,9 +161,9 @@ DJOSER = {
     'ACTIVATION_URL': 'activate/{uid}/{token}',
     'SERIALIZERS': {
         'user_create': 'accounts.serializers.UserCreateSerializer',
-        'user':'accounts.serializers.UserProfileSerializer',
+        'user':'accounts.serializers.User_ProfileSerializer',
         'user_delete': 'djoser.serializers.UserDeleteSerializer',
-        'current_user': 'accounts.serializers.UserProfileSerializer'
+        'current_user': 'accounts.serializers.User_ProfileSerializer'
         
     },
 
@@ -172,7 +172,7 @@ DJOSER = {
 
 }
 
-AUTH_USER_MODEL = 'accounts.UserProfile'
+AUTH_USER_MODEL = 'accounts.User_Profile'
 
 
 STATIC_ROOT = 'static/'

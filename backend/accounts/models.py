@@ -39,7 +39,7 @@ class UserProfileManager(BaseUserManager):
         return user
             
 
-class UserProfile(AbstractBaseUser, PermissionsMixin):
+class User_Profile(AbstractBaseUser, PermissionsMixin):
     """Database model for patients in the system"""
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
@@ -66,7 +66,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class PatientInfo(models.Model):
+class Injection_Details(models.Model):
     """Database model for patient information"""
 
     user_profile = models.ForeignKey(
